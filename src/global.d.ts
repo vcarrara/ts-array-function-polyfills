@@ -3,10 +3,10 @@ interface Array<T> {
     _forEach(callbackfn: (value: T, index: number) => void): void
     _map<U>(callbackfn: (value: T, index: number) => U): U[]
     _includes(searchElement: T, fromIndex?: number): boolean
-    _filter<S extends T>(predicate: (value: T, index: number) => value is S): S[]
+    _filter(predicate: (value: T, index: number) => unknown): T[]
     _some(predicate: (value: T, index: number) => unknown): boolean
     _every(predicate: (value: T, index: number) => unknown): boolean
-    _find<S extends T>(predicate: (value: T, index: number) => unknown): S | undefined
+    _find(predicate: (value: T, index: number) => unknown): T | undefined
     _findIndex(predicate: (value: T, index: number) => unknown): number
     _slice(start?: number, end?: number): T[]
     _join(separator?: string): string
