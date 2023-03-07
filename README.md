@@ -25,7 +25,11 @@ Everything should be installed correctly, now you can work. Don't hesitate to re
 ### 4. **Run tests**
 
 ```bash
-npm run test
+$ npm run test
+# or
+$ npx jest
+# you can target a specific test file with the following command
+$ npx jest -i src/functions/<function_name>/<function_name>.test.ts
 ```
 
 ## Useful resources
